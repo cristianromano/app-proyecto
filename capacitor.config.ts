@@ -4,9 +4,28 @@ const config: CapacitorConfig = {
   appId: 'io.ionic.starter',
   appName: 'app-proyecto',
   webDir: 'www',
+  backgroundColor: 'red',
+  plugins: {
+    SplashScreen: {
+      launchShowDuration: 3000,
+      launchAutoHide: true,
+      launchFadeOutDuration: 3000,
+      backgroundColor: '#ffffffff',
+      androidSplashResourceName: './src/assets/owl2.png',
+      androidScaleType: 'CENTER_CROP',
+      showSpinner: true,
+      androidSpinnerStyle: 'large',
+      iosSpinnerStyle: 'small',
+      spinnerColor: '#999999',
+      splashFullScreen: true,
+      splashImmersive: true,
+      layoutName: 'launch_screen',
+      useDialog: true,
+    },
+  },
   server: {
-    androidScheme: 'https'
-  }
+    androidScheme: 'https',
+  },
 };
 
 export default config;
