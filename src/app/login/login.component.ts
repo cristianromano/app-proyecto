@@ -12,6 +12,7 @@ import { CommonModule } from '@angular/common';
 import { SplashScreenComponent } from '../splash-screen/splash-screen.component';
 import { SplashScreen } from '@capacitor/splash-screen';
 import { CapacitorConfig } from '@capacitor/cli';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -35,15 +36,11 @@ export class LoginComponent implements OnInit {
   }
 
   irRegistro() {
+    SplashScreen.show();
     this.router.navigate(['/registro']);
   }
 
   async login() {
     console.log(this.form);
-
-    await SplashScreen.show({
-      showDuration: 2000,
-      autoHide: true,
-    });
   }
 }
