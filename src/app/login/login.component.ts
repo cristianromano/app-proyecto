@@ -35,8 +35,12 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  irRegistro() {
-    SplashScreen.show();
+  async irRegistro() {
+    await SplashScreen.show({
+      showDuration: 2000,
+      autoHide: true,
+      fadeOutDuration: 200,
+    });
     this.router.navigate(['/registro']);
   }
 
